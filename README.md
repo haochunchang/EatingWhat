@@ -1,3 +1,11 @@
+# Eating What: what do you want to eat?
+
+The most common problem in our daily life is: "What do I/we want to eat for breakfast/lunch/dinner?"
+
+For those who are fortunate to have the choice, you can get random suggestion from here.
+
+
+----
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

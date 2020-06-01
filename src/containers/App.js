@@ -5,6 +5,7 @@ import Button from "../components/Button";
 import CardList from "../components/CardList";
 import SearchBox from "../components/SearchBox";
 import Scroll from "../components/Scroll";
+import ErrorBoundary from "./ErrorBoundary";
 
 class App extends Component {
   constructor() {
@@ -18,7 +19,7 @@ class App extends Component {
 
   componentDidMount() {
     fetch(
-      "https://my-json-server.typicode.com/haochunchang/food-json-server/posts/"
+      "https://my-json-server.typicode.com/haochunchang/food-json-server/posts"
     )
       .then((response) => response.json())
       .then((posts) => this.setState({ foods: posts }));
@@ -28,21 +29,20 @@ class App extends Component {
     this.setState({ searchfield: event.target.value });
   };
 
-  onClicked = (event) => {
-    const random = Math.floor(Math.random() * this.state.foods.length + 1);
-    this.setState({ index: random });
-    console.log(event.target.value);
-  };
+  onClicked() {
+    const random = Math.floor(Math.random() * this.state.foods.length);
+    this.setState({ index: random, searchfield: "" });
+  }
 
   render() {
     const { foods, searchfield, index } = this.state;
     var filteredFoods = [];
-    if (index < 0) {
+    if (index !== -1 && !searchfield.length) {
+      filteredFoods = [foods[index]];
+    } else {
       filteredFoods = foods.filter((food) => {
         return food.name.toLowerCase().includes(searchfield.toLowerCase());
       });
-    } else {
-      filteredFoods = foods.filter((food) => food.id === index);
     }
     return !foods.length ? (
       <div className="App">
@@ -58,9 +58,11 @@ class App extends Component {
         </header>
         <div className="tc">
           <SearchBox searchChange={this.onSearchChange} />
-          <Button />
+          <Button onClicked={this.onClicked.bind(this)} />
           <Scroll>
-            <CardList foods={filteredFoods} />
+            <ErrorBoundary>
+              <CardList foods={filteredFoods} />
+            </ErrorBoundary>
           </Scroll>
         </div>
       </div>

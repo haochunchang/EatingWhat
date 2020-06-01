@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/EatingWhat/static/css/main.cc28c14e.chunk.css",
+    "main.js": "/EatingWhat/static/js/main.073a91b7.chunk.js",
+    "main.js.map": "/EatingWhat/static/js/main.073a91b7.chunk.js.map",
+    "runtime-main.js": "/EatingWhat/static/js/runtime-main.108e3c9e.js",
+    "runtime-main.js.map": "/EatingWhat/static/js/runtime-main.108e3c9e.js.map",
+    "static/css/2.3c03f26f.chunk.css": "/EatingWhat/static/css/2.3c03f26f.chunk.css",
+    "static/js/2.7628aa7c.chunk.js": "/EatingWhat/static/js/2.7628aa7c.chunk.js",
+    "static/js/2.7628aa7c.chunk.js.map": "/EatingWhat/static/js/2.7628aa7c.chunk.js.map",
+    "index.html": "/EatingWhat/index.html",
+    "precache-manifest.78da70a0f4f68a85bef785207a577d08.js": "/EatingWhat/precache-manifest.78da70a0f4f68a85bef785207a577d08.js",
+    "service-worker.js": "/EatingWhat/service-worker.js",
+    "static/css/2.3c03f26f.chunk.css.map": "/EatingWhat/static/css/2.3c03f26f.chunk.css.map",
+    "static/css/main.cc28c14e.chunk.css.map": "/EatingWhat/static/css/main.cc28c14e.chunk.css.map",
+    "static/js/2.7628aa7c.chunk.js.LICENSE.txt": "/EatingWhat/static/js/2.7628aa7c.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/EatingWhat/static/media/FontsFreeNetObelixProcyr.2d16b55c.woff",
+    "static/media/logo.svg": "/EatingWhat/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.108e3c9e.js",
+    "static/css/2.3c03f26f.chunk.css",
+    "static/js/2.7628aa7c.chunk.js",
+    "static/css/main.cc28c14e.chunk.css",
+    "static/js/main.073a91b7.chunk.js"
+  ]
+}

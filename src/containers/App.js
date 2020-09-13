@@ -1,50 +1,68 @@
 import React, { Component } from "react";
-import logo from "../logo.svg";
+
 import "./App.css";
+import Header from "../components/Header";
 import Button from "../components/Button";
 import CardList from "../components/CardList";
 import SearchBox from "../components/SearchBox";
 import Scroll from "../components/Scroll";
 import ErrorBoundary from "./ErrorBoundary";
 
+import { connect } from "react-redux";
+
+import { setSearchField, requestFoods } from "../actions";
+
+const mapStateToProps = (state) => {
+  return {
+    searchfield: state.searchFoods.searchfield,
+    foods: state.requestFoods.foods,
+    isPending: state.requestFoods.isPending,
+    error: state.requestFoods.error,
+  };
+};
+
+const filterFoods = (index, foods, searchfield) => {
+  var filteredFoods = [];
+  if (index !== -1 && !searchfield.length) {
+    filteredFoods = [foods[index]];
+  } else if (foods.length > 0) {
+    filteredFoods = foods.filter((food) => {
+      return food.name.toLowerCase().includes(searchfield.toLowerCase());
+    });
+  }
+  return filteredFoods;
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    onSearchChange: (event) => dispatch(setSearchField(event.target.value)),
+    onRequestFoods: () => dispatch(requestFoods()),
+  };
+};
+
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      foods: [],
-      searchfield: "",
       index: -1,
     };
   }
 
   componentDidMount() {
-    fetch(
-      "https://my-json-server.typicode.com/haochunchang/food-json-server/posts"
-    )
-      .then((response) => response.json())
-      .then((posts) => this.setState({ foods: posts }));
+    this.props.onRequestFoods();
   }
 
-  onSearchChange = (event) => {
-    this.setState({ searchfield: event.target.value });
-  };
-
   onClicked() {
-    const random = Math.floor(Math.random() * this.state.foods.length);
+    const random = Math.floor(Math.random() * this.props.foods.length);
     this.setState({ index: random, searchfield: "" });
   }
 
   render() {
-    const { foods, searchfield, index } = this.state;
-    var filteredFoods = [];
-    if (index !== -1 && !searchfield.length) {
-      filteredFoods = [foods[index]];
-    } else {
-      filteredFoods = foods.filter((food) => {
-        return food.name.toLowerCase().includes(searchfield.toLowerCase());
-      });
-    }
-    return !foods.length ? (
+    const { index } = this.state;
+    const { foods, searchfield, onSearchChange, isPending } = this.props;
+    var filteredFoods = filterFoods(index, foods, searchfield);
+
+    return isPending ? (
       <div className="App">
         <header className="header">
           <h1 className="f1">Loading...</h1>
@@ -52,12 +70,9 @@ class App extends Component {
       </div>
     ) : (
       <div className="App">
-        <header className="header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="f1">What Do You Want To Eat?</h1>
-        </header>
+        <Header />
         <div className="tc">
-          <SearchBox searchChange={this.onSearchChange} />
+          <SearchBox searchChange={onSearchChange} />
           <Button onClicked={this.onClicked.bind(this)} />
           <Scroll>
             <ErrorBoundary>
@@ -70,4 +85,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default connect(mapStateToProps, mapDispatchToProps)(App);

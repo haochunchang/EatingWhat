@@ -6,7 +6,7 @@ const CardList = ({ foods }) => {
     return (
       <Card
         key={i}
-        id={foods[i].id}
+        url={foods[i].url}
         name={foods[i].name}
         category={foods[i].category}
       />

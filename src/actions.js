@@ -17,12 +17,11 @@ export const requestFoods = () => (dispatch) => {
   )
     .then((response) => response.json())
     .then((data) => {
-      var i = 0;
-      for (i = 0; i < data.length; i++) {
-        var fname = data[i].name.toLowerCase();
+      for (var index = 0; index < data.length; index++) {
+        var name = data[index].name.toLowerCase();
         data[
-          i
-        ].url = `https://github.com/haochunchang/food-json-server/blob/master/images/${fname}.jpg?raw=true`;
+          index
+        ].url = `https://github.com/haochunchang/food-json-server/blob/master/images/${name}.jpg?raw=true`;
       }
       dispatch({ type: REQUEST_FOODS_SUCCESS, payload: data });
     })

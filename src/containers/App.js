@@ -2,7 +2,8 @@ import React, { Component } from "react";
 
 import "./App.css";
 import Header from "../components/Header";
-import Button from "../components/Button";
+import StarchFoodButton from "../components/StarchFoodButton";
+import ProteinFoodButton from "../components/ProteinFoodButton";
 import CardList from "../components/CardList";
 import SearchBox from "../components/SearchBox";
 import Scroll from "../components/Scroll";
@@ -60,7 +61,8 @@ class App extends Component {
   render() {
     const { index } = this.state;
     const { foods, searchfield, onSearchChange, isPending } = this.props;
-    var filteredFoods = filterFoods(index, foods, searchfield);
+    var StarchyFoods = filterFoods(index, foods, searchfield);
+    var ProteinFoods = filterFoods(index, foods, searchfield);
 
     return isPending ? (
       <div className="App">
@@ -71,14 +73,26 @@ class App extends Component {
     ) : (
       <div className="App">
         <Header />
-        <div className="tc">
+        <div className="row">
           <SearchBox searchChange={onSearchChange} />
-          <Button onClicked={this.onClicked.bind(this)} />
-          <Scroll>
-            <ErrorBoundary>
-              <CardList foods={filteredFoods} />
-            </ErrorBoundary>
-          </Scroll>
+
+          <div className="column">
+            <StarchFoodButton onClicked={this.onClicked.bind(this)} />
+            <Scroll>
+              <ErrorBoundary>
+                <CardList foods={StarchyFoods} />
+              </ErrorBoundary>
+            </Scroll>
+          </div>
+
+          <div className="column">
+            <ProteinFoodButton onClicked={this.onClicked.bind(this)} />
+            <Scroll>
+              <ErrorBoundary>
+                <CardList foods={ProteinFoods} />
+              </ErrorBoundary>
+            </Scroll>
+          </div>
         </div>
       </div>
     );

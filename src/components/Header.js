@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 
 class Header extends Component {
   shouldComponentUpdate(nextProps, nextState) {
@@ -7,11 +7,11 @@ class Header extends Component {
 
   render() {
     return (
-      <Fragment>
+      <div className="tc bg-light-green bw3 br-pill fl-w100">
         <header className="header">
           <h1 className="f1">What Do You Want To Eat?</h1>
         </header>
-      </Fragment>
+      </div>
     );
   }
 }

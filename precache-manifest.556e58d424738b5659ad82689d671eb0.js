@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "95187f112152c9de2cc2dabcb09947e7",
+    "revision": "0578db567cb67485c30a2a800f3052b1",
     "url": "/EatingWhat/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/EatingWhat/static/css/2.3c03f26f.chunk.css"
   },
   {
-    "revision": "ed57aa47dc723f0c8c9e",
-    "url": "/EatingWhat/static/css/main.b6f854ff.chunk.css"
+    "revision": "8a7d383450eb4c83c8d0",
+    "url": "/EatingWhat/static/css/main.950502fb.chunk.css"
   },
   {
     "revision": "e2402d28b384993f50f2",
@@ -36,7 +36,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/EatingWhat/static/js/6.c909d751.chunk.js"
   },
   {
-    "revision": "ed57aa47dc723f0c8c9e",
+    "revision": "8a7d383450eb4c83c8d0",
     "url": "/EatingWhat/static/js/main.c1a4b65b.chunk.js"
   },
   {
@@ -46,21 +46,5 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "2d16b55cfd7d3e3aa1d528c48f81aa7b",
     "url": "/EatingWhat/static/media/FontsFreeNetObelixProcyr.2d16b55c.woff"
-  },
-  {
-    "revision": "65eb1ec3bbe3cbe8e6acd8c3db5abd8b",
-    "url": "/EatingWhat/static/media/OpenSans-Regular-webfont.65eb1ec3.eot"
-  },
-  {
-    "revision": "96f62f549352cef6d2fb7c71ac9133d0",
-    "url": "/EatingWhat/static/media/OpenSans-Regular-webfont.96f62f54.woff"
-  },
-  {
-    "revision": "98b25ed8f8a57633895435395edf05d4",
-    "url": "/EatingWhat/static/media/OpenSans-Regular-webfont.98b25ed8.ttf"
-  },
-  {
-    "revision": "ba8bcd8ddb0416b85f656fb34d2dcafd",
-    "url": "/EatingWhat/static/media/OpenSans-Regular-webfont.ba8bcd8d.svg"
   }
 ]);

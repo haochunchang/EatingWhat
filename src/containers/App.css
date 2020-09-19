@@ -6,6 +6,7 @@
   font-weight: normal;
   src: local("ObelixPro Regular"),
     url("../font/FontsFreeNetObelixProcyr.woff") format("woff");
+  font-display: swap;
 }
 
 h1 {

@@ -7,7 +7,7 @@ class Header extends Component {
 
   render() {
     return (
-      <div className="tc bg-light-green bw3 br-pill fl-w100">
+      <div className="tc bw3 br-pill fl-w100">
         <header className="header">
           <h1 className="f1">What Do You Want To Eat?</h1>
         </header>

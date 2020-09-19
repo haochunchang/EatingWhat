@@ -16,7 +16,12 @@ import { setSearchField, requestFoods } from "../actions";
 const mapStateToProps = (state) => {
   return {
     searchfield: state.searchFoods.searchfield,
-    foods: state.requestFoods.foods,
+    starchyFoods: state.requestFoods.foods.filter(
+      (item) => item.category === "main food"
+    ),
+    proteinFoods: state.requestFoods.foods.filter(
+      (item) => item.category !== "main food"
+    ),
     isPending: state.requestFoods.isPending,
     error: state.requestFoods.error,
   };
@@ -45,7 +50,8 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      index: -1,
+      starch_index: -1,
+      protein_index: -1,
     };
   }
 
@@ -53,16 +59,33 @@ class App extends Component {
     this.props.onRequestFoods();
   }
 
-  onClicked() {
-    const random = Math.floor(Math.random() * this.props.foods.length);
-    this.setState({ index: random, searchfield: "" });
+  onClickedStarch() {
+    const srandom = Math.floor(Math.random() * this.props.starchyFoods.length);
+    this.setState({
+      starch_index: srandom,
+      searchfield: "",
+    });
+  }
+
+  onClickedProtein() {
+    const prandom = Math.floor(Math.random() * this.props.proteinFoods.length);
+    this.setState({
+      protein_index: prandom,
+      searchfield: "",
+    });
   }
 
   render() {
-    const { index } = this.state;
-    const { foods, searchfield, onSearchChange, isPending } = this.props;
-    var StarchyFoods = filterFoods(index, foods, searchfield);
-    var ProteinFoods = filterFoods(index, foods, searchfield);
+    const { starch_index, protein_index } = this.state;
+    const {
+      starchyFoods,
+      proteinFoods,
+      searchfield,
+      onSearchChange,
+      isPending,
+    } = this.props;
+    var StarchyFoods = filterFoods(starch_index, starchyFoods, searchfield);
+    var ProteinFoods = filterFoods(protein_index, proteinFoods, searchfield);
 
     return isPending ? (
       <div className="App">
@@ -77,7 +100,7 @@ class App extends Component {
           <SearchBox searchChange={onSearchChange} />
 
           <div className="column">
-            <StarchFoodButton onClicked={this.onClicked.bind(this)} />
+            <StarchFoodButton onClicked={this.onClickedStarch.bind(this)} />
             <Scroll>
               <ErrorBoundary>
                 <CardList foods={StarchyFoods} />
@@ -86,7 +109,7 @@ class App extends Component {
           </div>
 
           <div className="column">
-            <ProteinFoodButton onClicked={this.onClicked.bind(this)} />
+            <ProteinFoodButton onClicked={this.onClickedProtein.bind(this)} />
             <Scroll>
               <ErrorBoundary>
                 <CardList foods={ProteinFoods} />

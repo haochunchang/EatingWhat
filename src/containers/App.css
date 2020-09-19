@@ -5,11 +5,7 @@
   font-style: normal;
   font-weight: normal;
   src: local("ObelixPro Regular"),
-    url("../font/FontsFreeNetObelixProcyr.woff") format("woff"),
-    url("../font/OpenSans-Regular-webfont.eot") format("embedded-opentype"),
-    url("../font/OpenSans-Regular-webfont.woff") format("woff"),
-    url("../font/OpenSans-Regular-webfont.ttf") format("truetype"),
-    url("../font/OpenSans-Regular-webfont.svg") format("svg");
+    url("../font/FontsFreeNetObelixProcyr.woff") format("woff");
   font-display: swap;
 }
 

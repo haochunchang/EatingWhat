@@ -1,0 +1,2 @@
+(this.webpackJsonpeatingwhat=this.webpackJsonpeatingwhat||[]).push([[4],{35:function(t,e,n){"use strict";n.r(e);var a=n(0),o=n.n(a);e.default=function(t){var e=t.onClicked;return o.a.createElement(a.Fragment,null,o.a.createElement("button",{type:"button",onClick:e,className:"f3 pa3 btn btn-sucess grow"},"Protein Food?"))}}}]);
+//# sourceMappingURL=4.40ee5cdd.chunk.js.map

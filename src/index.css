@@ -416,7 +416,7 @@ input:-webkit-autofill {
 }
 @font-face {
   font-family: "percolate";
-  src: local("percolate"), url("/icon/percolate.eot?-5w3um4");
+  src: local("OpenSans"), local("percolate"), url("/icon/percolate.eot?-5w3um4");
   src: url("/icon/percolate.eot?#iefix5w3um4") format("embedded-opentype"),
     url("/icon/percolate.woff?5w3um4") format("woff"),
     url("/icon/percolate.ttf?5w3um4") format("truetype"),

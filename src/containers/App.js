@@ -1,17 +1,22 @@
 import React, { Component } from "react";
-
+import loadable from "@loadable/component";
 import "./App.css";
+
 import Header from "../components/Header";
-import StarchFoodButton from "../components/StarchFoodButton";
-import ProteinFoodButton from "../components/ProteinFoodButton";
-import CardList from "../components/CardList";
-import SearchBox from "../components/SearchBox";
 import Scroll from "../components/Scroll";
 import ErrorBoundary from "./ErrorBoundary";
 
 import { connect } from "react-redux";
-
 import { setSearchField, requestFoods } from "../actions";
+
+const CardList = loadable(() => import("../components/CardList"));
+const SearchBox = loadable(() => import("../components/SearchBox"));
+const StarchFoodButton = loadable(() =>
+  import("../components/StarchFoodButton")
+);
+const ProteinFoodButton = loadable(() =>
+  import("../components/ProteinFoodButton")
+);
 
 const mapStateToProps = (state) => {
   return {

@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FoodButton matches ProteinFoodButton snapshot 1`] = `ShallowWrapper {}`;
+
+exports[`FoodButton matches StarchFoodButton snapshot 1`] = `ShallowWrapper {}`;

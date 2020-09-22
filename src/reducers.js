@@ -17,7 +17,6 @@ export const searchFoods = (state = initialSearchState, action = {}) => {
   switch (action.type) {
     case CHANGE_SEARCH_FIELD:
       return Object.assign({}, state, { searchfield: action.payload });
-    // or {...state, searchfield: action.payload}
     default:
       return state;
   }

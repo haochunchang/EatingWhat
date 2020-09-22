@@ -1,3 +1,6 @@
+[![codecov](https://codecov.io/gh/haochunchang/EatingWhat/branch/master/graph/badge.svg)](https://codecov.io/gh/haochunchang/EatingWhat)
+
+
 # Eating What: what do you want to eat?
 
 The most common problem in our daily life is: "What do I/we want to eat for breakfast/lunch/dinner?"

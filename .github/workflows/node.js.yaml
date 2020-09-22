@@ -36,7 +36,7 @@ jobs:
         key: ${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
 
     - name: Run the tests and generate coverage report
-      run: npm test
+      run: npm test --updateSnapshot
     
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v1

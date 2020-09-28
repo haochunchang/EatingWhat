@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8df8861fb39babf47aba6b354a31d0b0",
+    "revision": "64bc153404ba47d3d655c007cad3cbaf",
     "url": "/EatingWhat/index.html"
   },
   {
-    "revision": "e2402d28b384993f50f2",
+    "revision": "9564ce495ddc689a441c",
     "url": "/EatingWhat/static/css/2.3c03f26f.chunk.css"
   },
   {
-    "revision": "d7c1551c18e03482d768",
-    "url": "/EatingWhat/static/css/main.950502fb.chunk.css"
+    "revision": "a9f1c61e8c22205d8bc0",
+    "url": "/EatingWhat/static/css/main.ce8060a9.chunk.css"
   },
   {
-    "revision": "e2402d28b384993f50f2",
-    "url": "/EatingWhat/static/js/2.bebd0a06.chunk.js"
+    "revision": "9564ce495ddc689a441c",
+    "url": "/EatingWhat/static/js/2.92d15d4d.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/EatingWhat/static/js/2.bebd0a06.chunk.js.LICENSE.txt"
+    "url": "/EatingWhat/static/js/2.92d15d4d.chunk.js.LICENSE.txt"
   },
   {
     "revision": "adc2db349cfd7d49dddd",
@@ -36,8 +36,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/EatingWhat/static/js/6.c909d751.chunk.js"
   },
   {
-    "revision": "d7c1551c18e03482d768",
-    "url": "/EatingWhat/static/js/main.c8c59b6d.chunk.js"
+    "revision": "a9f1c61e8c22205d8bc0",
+    "url": "/EatingWhat/static/js/main.336aaa2b.chunk.js"
   },
   {
     "revision": "09dfa62ebc0b94cc0a67",

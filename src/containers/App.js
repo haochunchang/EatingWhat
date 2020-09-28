@@ -1,22 +1,9 @@
 import React, { Component } from "react";
-import loadable from "@loadable/component";
-import "./App.css";
-
-import Header from "../components/Header";
-import Scroll from "../components/Scroll";
-import ErrorBoundary from "./ErrorBoundary";
+import MainPage from "../components/MainPage";
 
 import { connect } from "react-redux";
 import { setSearchField, requestFoods } from "../actions";
-
-const CardList = loadable(() => import("../components/CardList"));
-const SearchBox = loadable(() => import("../components/SearchBox"));
-const StarchFoodButton = loadable(() =>
-  import("../components/StarchFoodButton")
-);
-const ProteinFoodButton = loadable(() =>
-  import("../components/ProteinFoodButton")
-);
+import { FOOD_URL } from "../constants";
 
 const mapStateToProps = (state) => {
   return {
@@ -32,98 +19,16 @@ const mapStateToProps = (state) => {
   };
 };
 
-const filterFoods = (index, foods, searchfield) => {
-  var filteredFoods = [];
-  if (index !== -1 && !searchfield.length) {
-    filteredFoods = [foods[index]];
-  } else if (foods.length > 0) {
-    filteredFoods = foods.filter((food) => {
-      return food.name.toLowerCase().includes(searchfield.toLowerCase());
-    });
-  }
-  return filteredFoods;
-};
-
 const mapDispatchToProps = (dispatch) => {
   return {
     onSearchChange: (event) => dispatch(setSearchField(event.target.value)),
-    onRequestFoods: () => dispatch(requestFoods()),
+    onRequestFoods: () => dispatch(requestFoods(FOOD_URL)),
   };
 };
 
 class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      starch_index: -1,
-      protein_index: -1,
-    };
-  }
-
-  componentDidMount() {
-    this.props.onRequestFoods();
-  }
-
-  onClickedStarch() {
-    const srandom = Math.floor(Math.random() * this.props.starchyFoods.length);
-    this.setState({
-      starch_index: srandom,
-      searchfield: "",
-    });
-  }
-
-  onClickedProtein() {
-    const prandom = Math.floor(Math.random() * this.props.proteinFoods.length);
-    this.setState({
-      protein_index: prandom,
-      searchfield: "",
-    });
-  }
-
   render() {
-    const { starch_index, protein_index } = this.state;
-    const {
-      starchyFoods,
-      proteinFoods,
-      searchfield,
-      onSearchChange,
-      isPending,
-    } = this.props;
-    var StarchyFoods = filterFoods(starch_index, starchyFoods, searchfield);
-    var ProteinFoods = filterFoods(protein_index, proteinFoods, searchfield);
-
-    return isPending ? (
-      <div className="App">
-        <header className="header">
-          <h1 className="f1">Loading...</h1>
-        </header>
-      </div>
-    ) : (
-      <div className="App">
-        <Header />
-        <div className="row">
-          <SearchBox searchChange={onSearchChange} />
-
-          <div className="column">
-            <StarchFoodButton onClicked={this.onClickedStarch.bind(this)} />
-            <Scroll>
-              <ErrorBoundary>
-                <CardList foods={StarchyFoods} />
-              </ErrorBoundary>
-            </Scroll>
-          </div>
-
-          <div className="column">
-            <ProteinFoodButton onClicked={this.onClickedProtein.bind(this)} />
-            <Scroll>
-              <ErrorBoundary>
-                <CardList foods={ProteinFoods} />
-              </ErrorBoundary>
-            </Scroll>
-          </div>
-        </div>
-      </div>
-    );
+    return <MainPage {...this.props} />;
   }
 }
 

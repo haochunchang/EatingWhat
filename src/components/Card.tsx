@@ -1,7 +1,11 @@
 import React from "react";
 
-const Card = (props) => {
-  const { url, name } = props;
+interface CardStatelessProps {
+  url: string;
+  name: string;
+}
+
+const Card: React.FunctionComponent<CardStatelessProps> = ({ url, name }) => {
   return (
     <div className="tc dib br5 pa3 ma3 grow bw2 shadow">
       <img alt="food" src={url} />

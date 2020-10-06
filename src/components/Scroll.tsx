@@ -1,6 +1,10 @@
 import React from "react";
 
-const Scroll = (props) => {
+interface Props {
+  children?: JSX.Element;
+}
+
+const Scroll = (props: Props) => {
   return (
     <div
       style={{ overflowY: "auto", border: "1 px solid black", height: "500px" }}

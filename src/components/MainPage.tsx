@@ -11,20 +11,61 @@ const SearchBox = loadable(() => import("./SearchBox"));
 const StarchFoodButton = loadable(() => import("./StarchFoodButton"));
 const ProteinFoodButton = loadable(() => import("./ProteinFoodButton"));
 
-class MainPage extends Component {
-  constructor() {
-    super();
+export interface Food {
+  id: number;
+  name: string;
+  category: string;
+  url: string;
+}
+
+export interface AppProps {
+  starchyFoods: Array<Food>;
+  proteinFoods: Array<Food>;
+  searchfield: string;
+  isPending: boolean;
+  error: string;
+
+  onSearchChange(event: React.SyntheticEvent<HTMLInputElement>): void;
+  onRequestFoods(): void;
+}
+
+export interface AppState {
+  starch_index: number;
+  protein_index: number;
+  searchfield?: string;
+
+  searchFoods: {
+    searchfield: string;
+  };
+  requestFoods: {
+    foods: Array<Food>;
+    isPending: boolean;
+    error: string;
+  };
+}
+
+class MainPage extends Component<AppProps, AppState> {
+  constructor(props: AppProps) {
+    super(props);
     this.state = {
       starch_index: -1,
       protein_index: -1,
+      searchFoods: {
+        searchfield: "",
+      },
+      requestFoods: {
+        foods: [],
+        isPending: false,
+        error: "",
+      },
     };
   }
 
-  componentDidMount() {
+  componentDidMount(): void {
     this.props.onRequestFoods();
   }
 
-  onClickedStarch() {
+  onClickedStarch(): void {
     const srandom = Math.floor(Math.random() * this.props.starchyFoods.length);
     this.setState({
       starch_index: srandom,
@@ -32,7 +73,7 @@ class MainPage extends Component {
     });
   }
 
-  onClickedProtein() {
+  onClickedProtein(): void {
     const prandom = Math.floor(Math.random() * this.props.proteinFoods.length);
     this.setState({
       protein_index: prandom,
@@ -40,8 +81,8 @@ class MainPage extends Component {
     });
   }
 
-  filterFoods = (index, foods) => {
-    var filteredFoods = [];
+  filterFoods = (index: number, foods: Array<Food>): Array<Food> => {
+    var filteredFoods: Array<Food> = [];
     if (index !== -1 && !this.props.searchfield.length) {
       filteredFoods = [foods[index]];
     } else if (foods.length > 0) {
@@ -54,13 +95,14 @@ class MainPage extends Component {
     return filteredFoods;
   };
 
-  render() {
+  render(): JSX.Element {
+    console.log(this.state);
     const { starch_index, protein_index } = this.state;
     const {
       starchyFoods,
       proteinFoods,
-      onSearchChange,
       isPending,
+      onSearchChange,
     } = this.props;
     var StarchyFoods = this.filterFoods(starch_index, starchyFoods);
     var ProteinFoods = this.filterFoods(protein_index, proteinFoods);

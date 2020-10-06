@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/EatingWhat/static/css/main.ce8060a9.chunk.css",
-    "main.js": "/EatingWhat/static/js/main.336aaa2b.chunk.js",
-    "main.js.map": "/EatingWhat/static/js/main.336aaa2b.chunk.js.map",
-    "runtime-main.js": "/EatingWhat/static/js/runtime-main.23a619c3.js",
-    "runtime-main.js.map": "/EatingWhat/static/js/runtime-main.23a619c3.js.map",
+    "main.js": "/EatingWhat/static/js/main.3d275e7a.chunk.js",
+    "main.js.map": "/EatingWhat/static/js/main.3d275e7a.chunk.js.map",
+    "runtime-main.js": "/EatingWhat/static/js/runtime-main.27e82b71.js",
+    "runtime-main.js.map": "/EatingWhat/static/js/runtime-main.27e82b71.js.map",
     "static/css/2.3c03f26f.chunk.css": "/EatingWhat/static/css/2.3c03f26f.chunk.css",
     "static/js/2.92d15d4d.chunk.js": "/EatingWhat/static/js/2.92d15d4d.chunk.js",
     "static/js/2.92d15d4d.chunk.js.map": "/EatingWhat/static/js/2.92d15d4d.chunk.js.map",
-    "static/js/3.2aefd500.chunk.js": "/EatingWhat/static/js/3.2aefd500.chunk.js",
-    "static/js/3.2aefd500.chunk.js.map": "/EatingWhat/static/js/3.2aefd500.chunk.js.map",
+    "static/js/3.3be20b8d.chunk.js": "/EatingWhat/static/js/3.3be20b8d.chunk.js",
+    "static/js/3.3be20b8d.chunk.js.map": "/EatingWhat/static/js/3.3be20b8d.chunk.js.map",
     "static/js/4.40ee5cdd.chunk.js": "/EatingWhat/static/js/4.40ee5cdd.chunk.js",
     "static/js/4.40ee5cdd.chunk.js.map": "/EatingWhat/static/js/4.40ee5cdd.chunk.js.map",
     "static/js/5.357563fe.chunk.js": "/EatingWhat/static/js/5.357563fe.chunk.js",
@@ -17,7 +17,7 @@
     "static/js/6.c909d751.chunk.js": "/EatingWhat/static/js/6.c909d751.chunk.js",
     "static/js/6.c909d751.chunk.js.map": "/EatingWhat/static/js/6.c909d751.chunk.js.map",
     "index.html": "/EatingWhat/index.html",
-    "precache-manifest.4af1de580f45785f04bd788b0fc32623.js": "/EatingWhat/precache-manifest.4af1de580f45785f04bd788b0fc32623.js",
+    "precache-manifest.a8bfe970f0c5ec62e35252ee9f374a97.js": "/EatingWhat/precache-manifest.a8bfe970f0c5ec62e35252ee9f374a97.js",
     "service-worker.js": "/EatingWhat/service-worker.js",
     "static/css/2.3c03f26f.chunk.css.map": "/EatingWhat/static/css/2.3c03f26f.chunk.css.map",
     "static/css/main.ce8060a9.chunk.css.map": "/EatingWhat/static/css/main.ce8060a9.chunk.css.map",
@@ -25,10 +25,10 @@
     "static/media/MainPage.css": "/EatingWhat/static/media/FontsFreeNetObelixProcyr.2d16b55c.woff"
   },
   "entrypoints": [
-    "static/js/runtime-main.23a619c3.js",
+    "static/js/runtime-main.27e82b71.js",
     "static/css/2.3c03f26f.chunk.css",
     "static/js/2.92d15d4d.chunk.js",
     "static/css/main.ce8060a9.chunk.css",
-    "static/js/main.336aaa2b.chunk.js"
+    "static/js/main.3d275e7a.chunk.js"
   ]
 }

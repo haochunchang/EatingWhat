@@ -14,7 +14,6 @@ interface Dispatch {
 
 const mapStateToProps = (state: AppState) => {
   return {
-    searchfield: state.searchFoods.searchfield,
     starchyFoods: state.requestFoods.foods.filter(
       (item) => (item as Food).category === "main food"
     ),

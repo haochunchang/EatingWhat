@@ -42,21 +42,6 @@ describe("MainPage testing", () => {
     expect(mainpage.props.onRequestFoods).toHaveBeenCalledTimes(2);
   });
 
-  it("filter foods by searchfield", () => {
-    expect(mainpage.filterFoods(-1, [])).toEqual([]);
-    expect(mainpage.filterFoods(-1, mockProps.proteinFoods)).toEqual(
-      mockProps.proteinFoods
-    );
-
-    mockProps.searchfield = "st";
-    const mainpage_with_searchfield = shallow(
-      <MainPage {...mockProps} />
-    ).instance();
-    expect(
-      mainpage_with_searchfield.filterFoods(-1, mockProps.starchyFoods)
-    ).toEqual([]);
-  });
-
   it("tests onClick event on food button", () => {
     mainpage.onClickedStarch();
     mainpage.onClickedProtein();

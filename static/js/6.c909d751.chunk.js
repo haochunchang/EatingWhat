@@ -1,2 +1,0 @@
-(this.webpackJsonpeatingwhat=this.webpackJsonpeatingwhat||[]).push([[6],{34:function(t,e,n){"use strict";n.r(e);var a=n(0),c=n.n(a);e.default=function(t){var e=t.onClicked;return c.a.createElement(a.Fragment,null,c.a.createElement("button",{type:"button",onClick:e,className:"f3 pa3 btn btn-sucess grow"},"Starchy Food?"))}}}]);
-//# sourceMappingURL=6.c909d751.chunk.js.map

@@ -1,2 +1,0 @@
-(this.webpackJsonpeatingwhat=this.webpackJsonpeatingwhat||[]).push([[5],{33:function(e,a,t){"use strict";t.r(a);var n=t(0),s=t.n(n);a.default=function(e){var a=e.searchChange;return s.a.createElement("div",{className:"tc pa2"},s.a.createElement("label",null,"Have something in mind?",s.a.createElement("input",{className:"pa3 ba bg-washed-red",type:"search",placeholder:"search foods",onChange:a})))}}}]);
-//# sourceMappingURL=5.357563fe.chunk.js.map

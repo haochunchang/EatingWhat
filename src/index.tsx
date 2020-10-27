@@ -7,7 +7,7 @@ import { createLogger } from "redux-logger";
 import thunkMiddleware from "redux-thunk";
 import "./index.css";
 
-import App from "./containers/App";
+import App from "./components/App";
 import { rootReducer } from "./reducers";
 import "tachyons";
 

@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import Card from "./Card";
-import { Food } from "./MainPage";
+import { Food } from "./App";
 
 const CardList = ({ foods }: { foods: Array<Food> }) => {
   const cardComponent = foods.map((food, i) => {

@@ -1,6 +1,5 @@
 import * as actions from "./actions";
 import {
-  CHANGE_SEARCH_FIELD,
   REQUEST_FOODS_PENDING,
   REQUEST_FOODS_SUCCESS,
   REQUEST_FOODS_FAILED,
@@ -11,15 +10,6 @@ import thunkMiddleware from "redux-thunk";
 
 const mockStore = configureMockStore([thunkMiddleware]);
 const store = mockStore({});
-
-it("should set the searchField", () => {
-  const txt = "testing";
-  const expectedAction = {
-    type: CHANGE_SEARCH_FIELD,
-    payload: txt,
-  };
-  expect(actions.setSearchField(txt)).toEqual(expectedAction);
-});
 
 describe("requestFood actions", () => {
   const url =

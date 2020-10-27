@@ -1,30 +1,9 @@
 import {
-  CHANGE_SEARCH_FIELD,
   REQUEST_FOODS_PENDING,
   REQUEST_FOODS_SUCCESS,
   REQUEST_FOODS_FAILED,
 } from "./constants";
 import * as reducers from "./reducers";
-
-describe("searchFoods", () => {
-  it("should return initial state", () => {
-    expect(reducers.searchFoods(undefined, {})).toEqual({ searchfield: "" });
-  });
-
-  it("should handle CHANGE_SEARCH_FIELD", () => {
-    const mockSearchState = {
-      searchfield: "Apple and pears",
-    };
-    const action = {
-      type: CHANGE_SEARCH_FIELD,
-      payload: "Apple",
-    };
-    expect(reducers.searchFoods(mockSearchState, {})).toEqual(mockSearchState);
-    expect(reducers.searchFoods(mockSearchState, action).searchfield).toEqual(
-      action.payload
-    );
-  });
-});
 
 describe("requestFood", () => {
   let initialFoodState = {

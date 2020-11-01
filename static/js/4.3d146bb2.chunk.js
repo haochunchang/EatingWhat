@@ -1,2 +1,0 @@
-(this.webpackJsonpeatingwhat=this.webpackJsonpeatingwhat||[]).push([[4],{34:function(t,e,n){"use strict";n.r(e);var a=n(0),s=n.n(a);e.default=function(t){var e=t.onClicked,n=t.FoodName;return s.a.createElement(a.Fragment,null,s.a.createElement("button",{type:"button",onClick:e,className:"f3 pa3 btn btn-sucess grow"},n,"?"))}}}]);
-//# sourceMappingURL=4.3d146bb2.chunk.js.map

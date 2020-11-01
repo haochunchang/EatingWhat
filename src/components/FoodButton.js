@@ -1,13 +1,14 @@
 import React, { Fragment } from "react";
 
-const FoodButton = ({ onClicked, FoodName }) => (
+const FoodButton = ({ id, onClicked, FoodName }) => (
   <Fragment>
     <button
+      id={id}
       type="button"
       onClick={onClicked}
       className="f3 pa3 btn btn-sucess grow"
     >
-      {FoodName}?
+      {`${FoodName}?`}
     </button>
   </Fragment>
 );

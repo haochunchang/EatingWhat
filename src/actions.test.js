@@ -32,7 +32,6 @@ describe("requestFood actions", () => {
         type: REQUEST_FOODS_SUCCESS,
         payload: [
           {
-            id: "999",
             name: "French Fries",
             url: `https://github.com/haochunchang/food-json-server/blob/master/images/french fries.jpg?raw=true`,
           },
@@ -43,7 +42,6 @@ describe("requestFood actions", () => {
     fetch.mockResponseOnce(
       JSON.stringify([
         {
-          id: "999",
           name: "French Fries",
           url: `https://github.com/haochunchang/food-json-server/blob/master/images/french fries.jpg?raw=true`,
         },

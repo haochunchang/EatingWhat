@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { TypedUseSelectorHook, useSelector, useDispatch } from "react-redux";
-import loadable from "@loadable/component";
 
 import "./App.css";
 
@@ -9,8 +8,8 @@ import { FOOD_GITHUB_URL } from "../api/api";
 
 import Scroll from "./Scroll";
 import ErrorBoundary from "../containers/ErrorBoundary";
-const CardList = loadable(() => import("./CardList"));
-const FoodButton = loadable(() => import("./FoodButton"));
+import FoodButton from "./FoodButton";
+import CardList from "./CardList";
 
 export interface Food {
   id: number;
@@ -27,10 +26,10 @@ export interface AppState {
   };
 }
 
-function filterFoods(foods: Array<Food>) {
+export function filterFoods(foods: Array<Food>) {
   return {
     starchyFoods: foods.filter((item) => item.category === "main food"),
-    proteinFoods: foods.filter((item) => item.category !== "main food"),
+    proteinFoods: foods.filter((item) => item.category === "meat"),
   };
 }
 
@@ -52,7 +51,8 @@ export default function App(): JSX.Element {
   useEffect(() => {
     setStarch(starchyFoods);
     setProtein(proteinFoods);
-  }, [starchyFoods, proteinFoods]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [foods]);
 
   const onClickChangeStarch = (): void => {
     const index = Math.floor(Math.random() * starchyFoods.length);
@@ -78,6 +78,7 @@ export default function App(): JSX.Element {
       <div className="row">
         <div className="column">
           <FoodButton
+            id="starch-button"
             onClicked={onClickChangeStarch}
             FoodName={"Starchy Food"}
           />
@@ -90,6 +91,7 @@ export default function App(): JSX.Element {
 
         <div className="column">
           <FoodButton
+            id="protein-button"
             onClicked={onClickChangeProtein}
             FoodName={"Protein Food"}
           />

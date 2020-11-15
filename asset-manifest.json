@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/EatingWhat/static/css/main.03aea455.chunk.css",
-    "main.js": "/EatingWhat/static/js/main.c9257d01.chunk.js",
-    "main.js.map": "/EatingWhat/static/js/main.c9257d01.chunk.js.map",
+    "main.css": "/EatingWhat/static/css/main.373846ad.chunk.css",
+    "main.js": "/EatingWhat/static/js/main.e156a77e.chunk.js",
+    "main.js.map": "/EatingWhat/static/js/main.e156a77e.chunk.js.map",
     "runtime-main.js": "/EatingWhat/static/js/runtime-main.65e646f9.js",
     "runtime-main.js.map": "/EatingWhat/static/js/runtime-main.65e646f9.js.map",
     "static/css/2.3c03f26f.chunk.css": "/EatingWhat/static/css/2.3c03f26f.chunk.css",
     "static/js/2.77d43b67.chunk.js": "/EatingWhat/static/js/2.77d43b67.chunk.js",
     "static/js/2.77d43b67.chunk.js.map": "/EatingWhat/static/js/2.77d43b67.chunk.js.map",
     "index.html": "/EatingWhat/index.html",
-    "precache-manifest.b5741e87379ee2da0465518ff56a97ca.js": "/EatingWhat/precache-manifest.b5741e87379ee2da0465518ff56a97ca.js",
+    "precache-manifest.7e0acb6771f74829241bb50c3158c2fd.js": "/EatingWhat/precache-manifest.7e0acb6771f74829241bb50c3158c2fd.js",
     "service-worker.js": "/EatingWhat/service-worker.js",
     "static/css/2.3c03f26f.chunk.css.map": "/EatingWhat/static/css/2.3c03f26f.chunk.css.map",
-    "static/css/main.03aea455.chunk.css.map": "/EatingWhat/static/css/main.03aea455.chunk.css.map",
+    "static/css/main.373846ad.chunk.css.map": "/EatingWhat/static/css/main.373846ad.chunk.css.map",
     "static/js/2.77d43b67.chunk.js.LICENSE.txt": "/EatingWhat/static/js/2.77d43b67.chunk.js.LICENSE.txt",
     "static/media/App.css": "/EatingWhat/static/media/FontsFreeNetObelixProcyr.2d16b55c.woff"
   },
@@ -20,7 +20,7 @@
     "static/js/runtime-main.65e646f9.js",
     "static/css/2.3c03f26f.chunk.css",
     "static/js/2.77d43b67.chunk.js",
-    "static/css/main.03aea455.chunk.css",
-    "static/js/main.c9257d01.chunk.js"
+    "static/css/main.373846ad.chunk.css",
+    "static/js/main.e156a77e.chunk.js"
   ]
 }

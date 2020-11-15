@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e8d562a5808e94bc79a65334295857be",
+    "revision": "835dbb39668d05512ff545c2b875b06b",
     "url": "/EatingWhat/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/EatingWhat/static/css/2.3c03f26f.chunk.css"
   },
   {
-    "revision": "640b79f37838279a06de",
-    "url": "/EatingWhat/static/css/main.15416401.chunk.css"
+    "revision": "0ca6d498821eea78b0bb",
+    "url": "/EatingWhat/static/css/main.03aea455.chunk.css"
   },
   {
     "revision": "e7ebadd0e34e47fdb8f5",
@@ -20,7 +20,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/EatingWhat/static/js/2.77d43b67.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "640b79f37838279a06de",
+    "revision": "0ca6d498821eea78b0bb",
     "url": "/EatingWhat/static/js/main.c9257d01.chunk.js"
   },
   {

@@ -26,7 +26,6 @@ code {
 /* Reset.less
  * Props to Eric Meyer (meyerweb.com) for his CSS reset file. We're using an adapted version here	that cuts out some of the reset HTML elements we will never need here (i.e., dfn, samp, etc).
  * ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
-@import url("https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,800");
 html,
 body {
   margin: 0;
@@ -335,9 +334,7 @@ input[type="password"][disabled],
 textarea[disabled] {
   opacity: 0.5;
 }
-input:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0 1000px white inset;
-}
+
 .checkbox {
   display: inline-block;
   height: 3rem;
@@ -370,7 +367,6 @@ input:-webkit-autofill {
   color: #2cc5d2;
   margin-top: -1px;
   font-family: "percolate";
-  speak: none;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -428,7 +424,6 @@ input:-webkit-autofill {
 [class^="icon-"],
 [class*=" icon-"] {
   font-family: "percolate";
-  speak: none;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;

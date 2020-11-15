@@ -22,3 +22,7 @@ h1 {
   display: flex;
   justify-content: center;
 }
+
+section {
+  padding: 1em;
+}

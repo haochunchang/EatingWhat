@@ -9,6 +9,7 @@ import { FOOD_GITHUB_URL } from "../api/api";
 import Scroll from "./Scroll";
 import ErrorBoundary from "../containers/ErrorBoundary";
 import FoodButton from "./FoodButton";
+import SearchButton from "./SearchButton";
 import CardList from "./CardList";
 
 export interface Food {
@@ -75,33 +76,38 @@ export default function App(): JSX.Element {
       <header className="header">
         <h1 className="f1">Eating What?</h1>
       </header>
-      <div className="row">
-        <div className="column">
-          <FoodButton
-            id="starch-button"
-            onClicked={onClickChangeStarch}
-            FoodName={"Starchy Food"}
-          />
-          <Scroll>
-            <ErrorBoundary>
-              <CardList foods={starch} />
-            </ErrorBoundary>
-          </Scroll>
-        </div>
+      <section>
+        <SearchButton isDecided={false} />
+      </section>
+      <section>
+        <div className="row">
+          <div className="column">
+            <FoodButton
+              id="starch-button"
+              onClicked={onClickChangeStarch}
+              FoodName={"Starchy Food"}
+            />
+            <Scroll>
+              <ErrorBoundary>
+                <CardList foods={starch} />
+              </ErrorBoundary>
+            </Scroll>
+          </div>
 
-        <div className="column">
-          <FoodButton
-            id="protein-button"
-            onClicked={onClickChangeProtein}
-            FoodName={"Protein Food"}
-          />
-          <Scroll>
-            <ErrorBoundary>
-              <CardList foods={protein} />
-            </ErrorBoundary>
-          </Scroll>
+          <div className="column">
+            <FoodButton
+              id="protein-button"
+              onClicked={onClickChangeProtein}
+              FoodName={"Protein Food"}
+            />
+            <Scroll>
+              <ErrorBoundary>
+                <CardList foods={protein} />
+              </ErrorBoundary>
+            </Scroll>
+          </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 }

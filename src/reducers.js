@@ -1,26 +1,9 @@
 import { combineReducers } from "redux";
 import {
-  CHANGE_SEARCH_FIELD,
   REQUEST_FOODS_PENDING,
   REQUEST_FOODS_SUCCESS,
   REQUEST_FOODS_FAILED,
 } from "./constants";
-
-// Many Reducers below
-//
-//
-const initialSearchState = {
-  searchfield: "",
-};
-
-export const searchFoods = (state = initialSearchState, action = {}) => {
-  switch (action.type) {
-    case CHANGE_SEARCH_FIELD:
-      return Object.assign({}, state, { searchfield: action.payload });
-    default:
-      return state;
-  }
-};
 
 const initialFoodState = {
   isPending: false,
@@ -48,6 +31,5 @@ export const requestFoods = (state = initialFoodState, action = {}) => {
 };
 
 export const rootReducer = combineReducers({
-  searchFoods,
   requestFoods,
 });

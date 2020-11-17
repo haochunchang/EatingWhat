@@ -1,15 +1,16 @@
 import React, { Fragment } from "react";
 
-const ProteinFoodButton = ({ onClicked }) => (
+const FoodButton = ({ id, onClicked, FoodName }) => (
   <Fragment>
     <button
+      id={id}
       type="button"
       onClick={onClicked}
       className="f3 pa3 btn btn-sucess grow"
     >
-      Protein Food?
+      {`${FoodName}?`}
     </button>
   </Fragment>
 );
 
-export default ProteinFoodButton;
+export default FoodButton;

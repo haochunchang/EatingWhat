@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2618861b75ffeda97331f9d9ca9288fe",
+    "revision": "f4ecc509fa6ecdeb4e962b0fe2cf7f8a",
     "url": "/EatingWhat/index.html"
   },
   {
-    "revision": "e7ebadd0e34e47fdb8f5",
+    "revision": "1a94b42bc6c77cf1ccb6",
     "url": "/EatingWhat/static/css/2.3c03f26f.chunk.css"
   },
   {
-    "revision": "980b3a2539e4330264be",
+    "revision": "7af251738e54d01f1682",
     "url": "/EatingWhat/static/css/main.373846ad.chunk.css"
   },
   {
-    "revision": "e7ebadd0e34e47fdb8f5",
-    "url": "/EatingWhat/static/js/2.77d43b67.chunk.js"
+    "revision": "1a94b42bc6c77cf1ccb6",
+    "url": "/EatingWhat/static/js/2.a6125b52.chunk.js"
   },
   {
     "revision": "9b318b6fb13190fe82c0677e9264b3c7",
-    "url": "/EatingWhat/static/js/2.77d43b67.chunk.js.LICENSE.txt"
+    "url": "/EatingWhat/static/js/2.a6125b52.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "980b3a2539e4330264be",
-    "url": "/EatingWhat/static/js/main.e156a77e.chunk.js"
+    "revision": "7af251738e54d01f1682",
+    "url": "/EatingWhat/static/js/main.a08f207b.chunk.js"
   },
   {
     "revision": "3bea020a9bf28e932b4a",

@@ -83,6 +83,20 @@ describe("App testing", () => {
     expect(handleClick).toHaveBeenCalled();
   });
 
+  it("should trigger combined search on click", () => {
+    const mockedOpen = jest.fn();
+    const originalOpen = window.open;
+    window.open = mockedOpen;
+
+    const combinedSearchButton = wrapper
+      .find("#combined-search-button")
+      .hostNodes();
+    act(() => combinedSearchButton.prop("onClick")());
+    expect(mockedOpen).toHaveBeenCalled();
+
+    window.open = originalOpen;
+  });
+
   it("tests filterFood", () => {
     const foods = [
       { name: "rice", category: "main food" },

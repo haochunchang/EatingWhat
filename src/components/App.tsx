@@ -48,12 +48,19 @@ export default function App(): JSX.Element {
   const { starchyFoods, proteinFoods } = filterFoods(foods);
   const [starch, setStarch] = useState(starchyFoods);
   const [protein, setProtein] = useState(proteinFoods);
+  const [isDecided, setIsDecided] = useState(false);
 
   useEffect(() => {
     setStarch(starchyFoods);
     setProtein(proteinFoods);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [foods]);
+
+  useEffect(() => {
+    if (starch.length === 1 && protein.length === 1) {
+      setIsDecided(true);
+    }
+  }, [starch.length, protein.length]);
 
   const onClickChangeStarch = (): void => {
     const index = Math.floor(Math.random() * starchyFoods.length);
@@ -63,6 +70,12 @@ export default function App(): JSX.Element {
   const onClickChangeProtein = (): void => {
     const index = Math.floor(Math.random() * proteinFoods.length);
     setProtein([proteinFoods[index]]);
+  };
+
+  const onClickedSearch = (): void => {
+    const s = starch[0].name;
+    const p = protein[0].name;
+    window.open(`https://www.google.com.tw/maps/search/${p}+${s}/`);
   };
 
   return isPending ? (
@@ -77,7 +90,11 @@ export default function App(): JSX.Element {
         <h1 className="f1">Eating What?</h1>
       </header>
       <section>
-        <SearchButton isDecided={false} />
+        <SearchButton
+          id="combined-search-button"
+          isDecided={isDecided}
+          onClicked={onClickedSearch}
+        />
       </section>
       <section>
         <div className="row">

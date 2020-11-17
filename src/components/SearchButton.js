@@ -1,12 +1,13 @@
 import React, { Fragment } from "react";
 
-const SearchButton = ({ isDecided }) => {
+const SearchButton = ({ id, isDecided, onClicked }) => {
   return isDecided ? (
     <Fragment>
       <button
+        id={id}
         type="button"
-        // onClick={onClicked}
         className="f3 pa3 btn btn-success grow"
+        onClick={onClicked}
       >
         Search Nearby Foods
       </button>
